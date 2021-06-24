@@ -29,7 +29,7 @@ const App = () => {
        <ParticipantForm onSubmit={category => onSubmit(category)} />
        <TimerForm onSubmit={category => onSubmit(category)}/>
      </div>
-     <Clock time={time}/>
+     <Clock time={time * 60}/>
      <ParticipantList participants={participants} />
      <Footer />
     </div>
