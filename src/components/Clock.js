@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const Clock = () => {
+const Clock = ({ time }) => {
+    const [timer, setTimer] = useState(time)
+    const seconds = time * 60;
+
+
     return (
         <div>
             

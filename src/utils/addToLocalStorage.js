@@ -1,10 +1,14 @@
-const addToLocalStorage = (query, val) => {
-    const storage = JSON.parse(localStorage.getItem(query));
-  
-    if (!storage.includes(val)) {
-      searches.push(val);
-      localStorage.setItem(query, JSON.stringify(query));
-    }
+const addParticipantToLocalStorage = (participant) => {
+    const participants = JSON.parse(localStorage.getItem('participants')) || [];
+    participants.push(participant);
+    localStorage.setItem('participants', JSON.stringify(participants));
   };
   
-  export default addToLocalStorage;
+const addTimeToLocalStorage = time => {
+  localStorage.setItem('timer', time);
+}
+
+  export {
+    addParticipantToLocalStorage,
+    addTimeToLocalStorage
+  };
